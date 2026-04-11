@@ -71,12 +71,12 @@ const FileUpload = ({ onAnalysisComplete }) => {
       files.forEach(f => formData.append('files', f));
 
       const uploadRes = await axios.post(
-        'http://localhost:5000/api/upload', formData,
+       'https://codecompass-backend-3bjg.onrender.com/api/upload', formData,
         { headers: { 'Content-Type': 'multipart/form-data' } }
       );
 
       const analyzeRes = await axios.post(
-        'http://localhost:5000/api/analyze',
+        'https://codecompass-backend-3bjg.onrender.com/api/analyze',
         { files: uploadRes.data.files }
       );
 
