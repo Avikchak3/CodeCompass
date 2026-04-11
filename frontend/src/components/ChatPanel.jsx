@@ -56,7 +56,7 @@ const ChatPanel = ({ analysis, context }) => {
     setLoading(true);
 
     try {
-      const res = await axios.post('http://localhost:5000/api/chat', {
+      const res = await axios.post('https://codecompass-backend-3bjg.onrender.com/api/chat', {
         message: msg,
         chatHistory: newMessages.slice(0, -1),
         context,
